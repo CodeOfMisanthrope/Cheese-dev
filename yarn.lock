@@ -384,6 +384,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@blue-cheese/linters@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "@blue-cheese/linters@npm:0.1.1"
+  checksum: 10c0/99627f85e46af2cab136938c91531423dd42f836140fc82a2825f067387871896858ff4c124f8737ef0acff175b20eb3e60b3812d55b32f6c393dbe2225d8484
+  languageName: node
+  linkType: hard
+
 "@craftamap/esbuild-plugin-html@npm:^0.8.0":
   version: 0.8.0
   resolution: "@craftamap/esbuild-plugin-html@npm:0.8.0"
@@ -1343,14 +1350,14 @@ __metadata:
   linkType: hard
 
 "@rollup/plugin-html@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "@rollup/plugin-html@npm:1.0.3"
+  version: 1.1.0
+  resolution: "@rollup/plugin-html@npm:1.1.0"
   peerDependencies:
     rollup: ^1.20.0||^2.0.0||^3.0.0||^4.0.0
   peerDependenciesMeta:
     rollup:
       optional: true
-  checksum: 10c0/588d5f7b4613a6eeac369befa2dd1f53ba7d712a698a0d4712bc9933cc2f7e7bb09902c71fe6d7d86090575423b2121b154557096345c83685c6ea153d758e01
+  checksum: 10c0/d56f0620fc9f236447ecfe4d2dce94f66c869ed748398f1d02f2f8e6042c4f31d1886954ff50a4757f7620eab2a8b6b40a238ad49a8f459a9e65657407bd10d8
   languageName: node
   linkType: hard
 
@@ -2490,6 +2497,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cheese@workspace:."
   dependencies:
+    "@blue-cheese/linters": "npm:^0.1.1"
     "@craftamap/esbuild-plugin-html": "npm:^0.8.0"
     "@esbuild/linux-x64": "npm:^0.24.0"
     "@eslint/js": "npm:^9.14.0"
