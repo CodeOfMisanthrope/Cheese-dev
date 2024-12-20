@@ -20,7 +20,7 @@
       "baseUrl": "./",
       "paths": {
          "~core/*": [
-            "src/core/*"
+            "src/lib/core/*"
          ],
          "~assets/*": [
             "assets/*"
