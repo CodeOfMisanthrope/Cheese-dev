@@ -13,10 +13,10 @@
    "scripts": {
       "build": "rollup -c rollup.config.ts --configPlugin typescript",
       "serve": "dotenv -e .env tsx esbuild.config.ts",
-      "lint": "eslint src/core/**",
+      "lint": "eslint src/lib/**",
       "test": "jest",
-      "fmt:write": "prettier src/core --write",
-      "fmt:check": "prettier src/core --check",
+      "fmt:write": "prettier src/lib --write",
+      "fmt:check": "prettier src/lib --check",
       "hooks:install": "lefthook install"
    },
    "devDependencies": {
