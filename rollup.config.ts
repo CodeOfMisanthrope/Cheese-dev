@@ -4,7 +4,7 @@ import alias from "@rollup/plugin-alias";
 import terser from "@rollup/plugin-terser";
 import del from "rollup-plugin-delete";
 
-import pkg from "./package.json" with {type: "json"};
+import pkg from "./package.json" with { type: "json" };
 
 const config = {
 	input: "src/lib/index.ts",
@@ -18,7 +18,7 @@ const config = {
 		{
 			file: pkg.browser,
 			name: pkg.name,
-			format: 'umd',
+			format: "umd",
 			sourcemap: true,
 		},
 		{
@@ -29,7 +29,7 @@ const config = {
 		},
 	],
 	plugins: [
-		del({targets: "dist/*"}),
+		del({ targets: "dist/*" }),
 		commonjs(),
 		terser(),
 		typescript({
@@ -39,7 +39,7 @@ const config = {
 				"src/esbuild-api.ts",
 				"src/core/**/*.spec.ts",
 				"src/core/**/spec.ts",
-			]
+			],
 		}),
 		alias({
 			entries: [
