@@ -21,7 +21,8 @@ async function main() {
 		tsconfig: "tsconfig.json",
 		logLevel: "info",
 		alias: {
-			"~core": path.resolve(dirname, "src", "core"),
+			"~lib": path.resolve(dirname, "src", "lib"),
+			"~core": path.resolve(dirname, "src", "lib", "core"),
 			"~assets": path.resolve(dirname, "assets"),
 		},
 		plugins: [
