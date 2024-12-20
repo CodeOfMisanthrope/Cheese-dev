@@ -26,7 +26,7 @@ const config = {
 			name: pkg.name,
 			format: "esm",
 			sourcemap: true,
-		},
+		}
 	],
 	plugins: [
 		del({ targets: "dist/*" }),
