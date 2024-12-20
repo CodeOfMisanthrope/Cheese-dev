@@ -7,7 +7,7 @@ import del from "rollup-plugin-delete";
 import pkg from "./package.json" with {type: "json"};
 
 const config = {
-	input: "src/lib.ts",
+	input: "src/lib/index.ts",
 	output: [
 		{
 			file: pkg.main,
@@ -43,9 +43,10 @@ const config = {
 		}),
 		alias({
 			entries: [
-				{find: '~core', replacement: 'src/core'},
-				{find: '~assets', replacement: 'assets'},
-			]
+				{ find: "~lib", replacement: "src/lib" },
+				{ find: "~core", replacement: "src/lib/core" },
+				{ find: "~assets", replacement: "assets" },
+			],
 		}),
 	],
 };
