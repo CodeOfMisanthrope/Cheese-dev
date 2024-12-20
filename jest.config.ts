@@ -8,7 +8,7 @@ const config: Config = {
 		"<rootDir>/src/**/?(*.)+(spec).ts"
 	],
 	moduleNameMapper: {
-		"~core/(.*)": "<rootDir>/src/core/$1",
+		"~core/(.*)": "<rootDir>/src/lib/core/$1",
 	},
 
 	preset: "ts-jest",
