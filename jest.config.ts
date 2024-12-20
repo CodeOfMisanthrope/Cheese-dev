@@ -1,14 +1,14 @@
-import type {Config} from "jest";
+import type { Config } from "jest";
 
 const config: Config = {
-	rootDir: './',
+	rootDir: "./",
 	projects: ["<rootDir>"],
 	testMatch: [
 		"<rootDir>/src/**/*[sS]pec.ts",
-		"<rootDir>/src/**/?(*.)+(spec).ts"
+		"<rootDir>/src/**/?(*.)+(spec).ts",
 	],
 	moduleNameMapper: {
-		"~core/(.*)": "<rootDir>/src/core/$1",
+		"~core/(.*)": "<rootDir>/src/lib/core/$1",
 	},
 
 	preset: "ts-jest",
