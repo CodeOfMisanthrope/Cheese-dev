@@ -18,7 +18,7 @@ const config = {
 		{
 			file: pkg.browser,
 			name: pkg.name,
-			format: "umd",
+			format: 'umd',
 			sourcemap: true,
 		},
 		{
