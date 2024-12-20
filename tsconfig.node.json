@@ -22,6 +22,9 @@
          "~core/*": [
             "src/lib/core/*"
          ],
+         "~lib/*": [
+            "src/lib/*"
+         ],
          "~assets/*": [
             "assets/*"
          ]
