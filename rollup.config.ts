@@ -37,8 +37,8 @@ const config = {
 			exclude: [
 				"src/index.ts",
 				"src/esbuild-api.ts",
-				"src/core/**/*.spec.ts",
-				"src/core/**/spec.ts",
+				"src/lib/core/**/*.spec.ts",
+				"src/lib/core/**/spec.ts",
 			],
 		}),
 		alias({
