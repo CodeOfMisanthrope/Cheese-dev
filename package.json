@@ -19,6 +19,9 @@
       "fmt:check": "prettier src/lib --check",
       "hooks:install": "lefthook install"
    },
+   "engines": {
+      "node": ">=14.0.0"
+   },
    "devDependencies": {
       "@blue-cheese/linters": "^0.1.1",
       "@craftamap/esbuild-plugin-html": "^0.8.0",
