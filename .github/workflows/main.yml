@@ -8,6 +8,10 @@ jobs:
    linters:
       runs-on: ubuntu-22.04
 
+      strategy:
+         matrix:
+            node-version: [22.x]
+
       steps:
          - uses: actions/checkout@v4
 
