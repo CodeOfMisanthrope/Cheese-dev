@@ -20,7 +20,8 @@
       "hooks:install": "lefthook install"
    },
    "engines": {
-      "node": ">=14.0.0"
+      "node": ">=14.0.0",
+      "yarn": ">4.0.0"
    },
    "devDependencies": {
       "@blue-cheese/linters": "^0.1.1",
