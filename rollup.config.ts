@@ -10,19 +10,13 @@ const config = {
 	input: "src/lib/index.ts",
 	output: [
 		{
-			file: pkg.main,
+			file: pkg.exports.require,
 			name: pkg.name,
 			format: "cjs",
 			sourcemap: true,
 		},
 		{
-			file: pkg.browser,
-			name: pkg.name,
-			format: 'umd',
-			sourcemap: true,
-		},
-		{
-			file: pkg.module,
+			file: pkg.exports.import,
 			name: pkg.name,
 			format: "esm",
 			sourcemap: true,
