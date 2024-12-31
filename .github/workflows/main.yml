@@ -83,7 +83,7 @@ jobs:
          matrix:
             node-version: [ 21.x ]
 
-      needs: test
+      needs: [test,deploy]
 
       steps:
          -  name: Checkout code
