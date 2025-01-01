@@ -101,12 +101,14 @@ jobs:
          -  name: Run build
             run: yarn build
 
-         -  name: Run deploy
-            run: |
-               git config --local user.email "iosdsbb@github.com"
-               git config --local user.name "fower-code"
-               git add dist
-               git commit -m "deploy"
-               git push
-            env:
-               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         - name: Show TOKEN
+           run: echo ${{ secrets.GITHUB_TOKEN }}
+#         -  name: Run deploy
+#            run: |
+#               git config --local user.email "iosdsbb@github.com"
+#               git config --local user.name "fower-code"
+#               git add dist
+#               git commit -m "deploy"
+#               git push
+#            env:
+#               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
