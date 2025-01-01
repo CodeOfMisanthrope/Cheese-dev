@@ -108,3 +108,5 @@ jobs:
                git add dist
                git commit -m "deploy"
                git push
+            env:
+               GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
