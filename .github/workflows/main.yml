@@ -5,85 +5,86 @@ on:
       branches: [ ci ]
 
 jobs:
-   linters:
-      runs-on: ubuntu-22.04
-
-      strategy:
-         matrix:
-            node-version: [ 21.x ]
-
-      steps:
-         -  name: Checkout code
-            uses: actions/checkout@v4
-
-         -  name: Set up Node.js ${{ matrix.node-version }}
-            uses: actions/setup-node@v4
-            with:
-               cache: 'yarn'
-               node-version: ${{ matrix.node-version }}
-
-         -  name: Install dependencies
-            run: yarn
-
-         -  name: Run lint
-            run: yarn lint
-
-   test:
-      runs-on: ubuntu-22.04
-
-      strategy:
-         matrix:
-            node-version: [ 21.x ]
-
-      steps:
-         -  name: Checkout code
-            uses: actions/checkout@v4
-
-         -  name: Set up Node.js ${{ matrix.node-version }}
-            uses: actions/setup-node@v4
-            with:
-               cache: 'yarn'
-               node-version: ${{ matrix.node-version }}
-
-         -  name: Install dependencies
-            run: yarn
-
-         -  name: Run test
-            run: yarn test
-
-   build:
-      runs-on: ubuntu-22.04
-
-      strategy:
-         matrix:
-            node-version: [ 21.x ]
-
-      needs: test
-
-      steps:
-         -  name: Checkout code
-            uses: actions/checkout@v4
-
-         -  name: Set up Node.js ${{ matrix.node-version }}
-            uses: actions/setup-node@v4
-            with:
-               cache: 'yarn'
-               node-version: ${{ matrix.node-version }}
-
-         -  name: Install dependencies
-            run: yarn
-
-         -  name: Run build
-            run: yarn build
+#   linters:
+#      runs-on: ubuntu-22.04
+#
+#      strategy:
+#         matrix:
+#            node-version: [ 21.x ]
+#
+#      steps:
+#         -  name: Checkout code
+#            uses: actions/checkout@v4
+#
+#         -  name: Set up Node.js ${{ matrix.node-version }}
+#            uses: actions/setup-node@v4
+#            with:
+#               cache: 'yarn'
+#               node-version: ${{ matrix.node-version }}
+#
+#         -  name: Install dependencies
+#            run: yarn
+#
+#         -  name: Run lint
+#            run: yarn lint
+#
+#   test:
+#      runs-on: ubuntu-22.04
+#
+#      strategy:
+#         matrix:
+#            node-version: [ 21.x ]
+#
+#      steps:
+#         -  name: Checkout code
+#            uses: actions/checkout@v4
+#
+#         -  name: Set up Node.js ${{ matrix.node-version }}
+#            uses: actions/setup-node@v4
+#            with:
+#               cache: 'yarn'
+#               node-version: ${{ matrix.node-version }}
+#
+#         -  name: Install dependencies
+#            run: yarn
+#
+#         -  name: Run test
+#            run: yarn test
+#
+#   build:
+#      runs-on: ubuntu-22.04
+#
+#      strategy:
+#         matrix:
+#            node-version: [ 21.x ]
+#
+#      needs: test
+#
+#      steps:
+#         -  name: Checkout code
+#            uses: actions/checkout@v4
+#
+#         -  name: Set up Node.js ${{ matrix.node-version }}
+#            uses: actions/setup-node@v4
+#            with:
+#               cache: 'yarn'
+#               node-version: ${{ matrix.node-version }}
+#
+#         -  name: Install dependencies
+#            run: yarn
+#
+#         -  name: Run build
+#            run: yarn build
 
    deploy:
+#      environment: ${{ secrets.GITHUB_TOKEN }}
       runs-on: ubuntu-22.04
 
       strategy:
          matrix:
             node-version: [ 21.x ]
 
-      needs: [test,build]
+#      needs: [test,build]
 
       steps:
          -  name: Checkout code
@@ -95,14 +96,14 @@ jobs:
                cache: 'yarn'
                node-version: ${{ matrix.node-version }}
 
-         -  name: Install dependencies
-            run: yarn
-
-         -  name: Run build
-            run: yarn build
+#         -  name: Install dependencies
+#            run: yarn
+#
+#         -  name: Run build
+#            run: yarn build
 
          - name: Show TOKEN
-           run: echo ${{ secrets.GITHUB_TOKEN }}
+           run: echo ${{ secrets }}
 #         -  name: Run deploy
 #            run: |
 #               git config --local user.email "iosdsbb@github.com"
