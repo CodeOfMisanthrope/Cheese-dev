@@ -1,8 +1,10 @@
 name: main
 
 on:
-   push:
-      branches: [ ci ]
+   #  push:
+   #    branches: [ main ]
+   pull_request:
+      branches: [ main ]
 
 jobs:
    linters:
