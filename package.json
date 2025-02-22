@@ -6,9 +6,12 @@
    "keywords": [],
    "type": "module",
    "types": "index.d.ts",
-   "main": "dist/bundle.min.js",
-   "module": "dist/bundle.esm.js",
-   "browser": "dist/bundle.umd.js",
+   "module": "./dist/bundle.mjs",
+   "exports": {
+      "import": "./dist/bundle.mjs",
+      "require": "./dist/bundle.cjs",
+      "default": "./dist/bundle.mjs"
+   },
    "packageManager": "yarn@4.5.3",
    "scripts": {
       "build": "rollup -c rollup.config.ts --configPlugin typescript",
@@ -18,6 +21,10 @@
       "fmt:write": "prettier src/lib --write",
       "fmt:check": "prettier src/lib --check",
       "hooks:install": "lefthook install"
+   },
+   "engines": {
+      "node": ">=14.0.0",
+      "yarn": ">4.0.0"
    },
    "devDependencies": {
       "@blue-cheese/linters": "^0.1.1",
