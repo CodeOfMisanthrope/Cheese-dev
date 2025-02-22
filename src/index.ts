@@ -1,7 +1,7 @@
 import "~assets/style/main.css";
 import esbuildApiInit from "./esbuild-api";
-import {Range} from "~core/range";
-
+// import {Range} from "~core/range";
+import {Range} from "../dist/build/src/lib/core/range"
 esbuildApiInit();
 
 const r = new Range("a", "c");
